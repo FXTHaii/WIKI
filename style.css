@@ -1,71 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
+/* Permettre le défilement sur toute la page */
+body, html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal, mais laisse le vertical */
+    overflow-y: auto;   /* Assure que le défilement vertical est activé */
+    height: 100%;       /* Permet d'étendre la hauteur au contenu */
 }
 
-header {
-    background: #222;
-    padding: 10px 20px;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-menu > li {
-    position: relative;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-}
-
-.nav-menu .dropdown {
-    display: none;
-    position: absolute;
-    background: #333;
-    list-style: none;
-    top: 100%;
-    left: 0;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu .dropdown li {
-    width: 200px;
-}
-
-.nav-menu li:hover > .dropdown {
-    display: block;
-}
-
-.btn-play {
-    background: green;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-left: auto;
-}
-
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg') center/cover no-repeat;
-    color: white;
-    padding: 50px;
-    text-align: center;
-}
-
-.btn-main {
-    background: orange;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
+/* Vérifie qu'aucun élément majeur ne prend toute la hauteur */
+.main-content {
+    min-height: 100vh; /* Assure que le contenu occupe au moins toute la hauteur de la vue */
 }
